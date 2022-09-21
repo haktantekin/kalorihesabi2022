@@ -32,7 +32,7 @@
       <div>
         <nav class="text-left md:text-center text-sm block md:flex mt-4 md:mt-0 p-0 md:pl-3 md:pr-3">
           <div>
-            <?php wp_nav_menu(array('theme_location' => 'Info')); ?>
+            <?php wp_nav_menu(array('theme_location' => 'Calculate')); ?>
           </div>
         </nav>
       </div>

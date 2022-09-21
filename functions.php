@@ -90,7 +90,8 @@ function register_my_menus() {
   register_nav_menus(
     array(
       'Header' => __( 'Header' ),
-      'Info' => __( 'Info' )
+      'Info' => __( 'Info' ),
+      'Calculate' => __( 'Calculate' )
 
     
     )
