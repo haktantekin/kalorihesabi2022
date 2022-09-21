@@ -90,160 +90,121 @@
       <a href="<?php echo esc_url($categorylink); ?>"><?php echo get_the_category_by_ID($linkbyid); ?></a>
     </h2>
     <div class="w-full grid gap-x-5 gap-y-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
-    <?php query_posts('category_name=kac-kalori&posts_per_page=5'); ?>
-    <?php while (have_posts()) : the_post(); ?>
-      <?php $url = wp_get_attachment_url(get_post_thumbnail_id($post->ID), 'full'); ?>
-      <?php
-      $the_cat = get_the_category();
-      $category_name = $the_cat[0]->cat_name;
-      $category_link = get_category_link($the_cat[0]->cat_ID);
-      ?>
-      <div class="flex h-full flex-col">
-        <a href="<?php the_permalink(); ?>" class="block w-full h-full">
-        <?php if (has_post_thumbnail()) { ?>
-          <picture alt="">
-            <source alt="<?php the_title(); ?>" width="100%" height="100%" srcset="<?php echo $url ?>" type="image/avif" alt="">
-            <img alt="<?php the_title(); ?>" class="object-cover h-72 scale-100 hover:scale-105 ease-in duration-200" width="233" height="155" decoding="async" loading="lazy" src="<?php echo $url ?>" alt="">
-          </picture>
-          <?php } else { ?>
-           <img alt="<?php the_title(); ?>" src="<?php echo 'https://kalorihesabi.com/wp-content/uploads/2022/05/kalori-hesabi.heic' ?>" />
-          <?php }  ?>
-        </a>
-        <div class="mt-5 flex gap-4 text-darkgray text-xs">
-          <div>
-            <i class="fa fa-tag mr-1"></i>
-            <?php the_category(', ') ?>
+      <?php query_posts('category_name=kac-kalori&posts_per_page=5'); ?>
+      <?php while (have_posts()) : the_post(); ?>
+        <?php $url = wp_get_attachment_url(get_post_thumbnail_id($post->ID), 'full'); ?>
+        <?php
+        $the_cat = get_the_category();
+        $category_name = $the_cat[0]->cat_name;
+        $category_link = get_category_link($the_cat[0]->cat_ID);
+        ?>
+        <div class="flex h-full flex-col">
+          <a href="<?php the_permalink(); ?>" class="block w-full h-full">
+            <?php if (has_post_thumbnail()) { ?>
+              <picture alt="">
+                <source alt="<?php the_title(); ?>" width="100%" height="100%" srcset="<?php echo $url ?>" type="image/avif" alt="">
+                <img alt="<?php the_title(); ?>" class="object-cover h-72 scale-100 hover:scale-105 ease-in duration-200" width="233" height="155" decoding="async" loading="lazy" src="<?php echo $url ?>" alt="">
+              </picture>
+            <?php } else { ?>
+              <img alt="<?php the_title(); ?>" src="<?php echo 'https://kalorihesabi.com/wp-content/uploads/2022/05/kalori-hesabi.heic' ?>" />
+            <?php }  ?>
+          </a>
+          <div class="mt-5 flex gap-4 text-darkgray text-xs">
+            <div>
+              <i class="fa fa-tag mr-1"></i>
+              <?php the_category(', ') ?>
+            </div>
+            <div class="content-list-item-info-tag">
+              <i class="fa fa-hashtag"></i>
+              <?php the_tags(' ', ' '); ?>
+            </div>
           </div>
-          <div class="content-list-item-info-tag"> 
-            <i class="fa fa-hashtag"></i>
-            <?php the_tags(' ', ' '); ?>
-          </div>
+          <a href="<?php the_permalink(); ?>" class="block w-full h-full">
+            <div class="mt-1 block">
+              <h3><?php the_title(); ?></h3>
+            </div>
+          </a>
         </div>
-        <a href="<?php the_permalink(); ?>" class="block w-full h-full">
-          <div class="mt-1 block">
-            <h3><?php the_title(); ?></h3>
-          </div>
-        </a>
-      </div>
 
       <?php endwhile; ?>
-       <?php wp_reset_query(); ?>
-       <div class="flex justify-center items-center h-full">
+      <?php wp_reset_query(); ?>
+      <div class="flex justify-center items-center h-full">
         <a href="<?php echo esc_url($categorylink); ?>" class="bg-white text-dark max-h-7 w-36 border-2 pb-5 pt-5 font-semibold border-dashed font-noto flex justify-center items-center hover:bg-dark hover:text-white">
           Tümünü Gör >
         </a>
       </div>
-      
+
     </div>
   </div>
 </section>
-<!-- <section class="flex-col pt-7 bg-gray pb-7 mt-12 mb-7">
+<section class="flex-col pt-7 bg-gray pb-7 mt-12 mb-7">
   <div class="container">
-    <h2 class="mb-2 md:mb-7 border-gray border-dashed border-b-2 pb-0 md:pb-4">
-      <a href="javascript:;">Besinleri Gör</a>
+    <h2 class="mb-2 md:mb-2 border-gray border-dashed border-b-2 pb-0 md:pb-4">
+      Yiyeceklerin Kalorileri
     </h2>
     <div class="sub-cat-list">
+  
       <ul class="grid gap-2 grid-cols-1 sm:grid-cols-3 lg:grid-cols-5">
-        <li class="cat-item cat-item-36"><a href="https://kalorihesabi.com/kategori/kac-kalori/atistirmaliklarin-kalorileri/">Atıştırmalıkların
-            Kalorileri</a> (13)</li>
-        <li class="cat-item cat-item-19"><a href="https://kalorihesabi.com/kategori/kac-kalori/baharatlarin-kalorileri/" title="Baharatların kalorileri neler? Baharatlar ve şifalı bitkiler yüzyıllardır hem mutfak hem de tıbbi amaçlar için kullanılmaktadır. Baharatlar sadece yiyecek ve içeceklerin lezzetini, aromasını ve rengini iyileştirmekle kalmaz, aynı zamanda akut ve kronik hastalıklardan da korur.  İnsanların, özellikle çeşitli kronik durumlar için tıbbi ve terapötik/çözüm amaçlı kullanım için baharat ve otların kullanımını düşünüyor. Baharatların ve bitkilerin antioksidan, antienflamatuar, antitümörojenik, antikanserojenik ve glikoz ve kolesterol düşürücü aktivitelerin yanı sıra biliş ve ruh halini etkileyen özelliklere sahip olduğuna dair artık bol miktarda kanıt var. Son on yılda yapılan araştırmalar, kükürt içeren bileşikler, tanenler, alkaloidler, fenolik diterpenler ve vitaminler dahil olmak üzere biyoaktif bileşenleri aracılığıyla sahip oldukları çeşitli sağlık özellikleri hakkında rapor vermiştir. özellikle flavonoidler ve polifenoller.  Karanfil, biberiye, adaçayı, kekik ve tarçın gibi baharatlar ve otlar, yüksek fenolik bileşik içeriği ile mükemmel antioksidan kaynaklarıdır.  Baharatlı yiyeceklerin sık tüketilmesinin ayrıca kanser ve iskemik kalp ve solunum sistemi hastalıklarından daha düşük ölüm riski ile bağlantılı olduğu açıktır. Bununla birlikte, özellikle kronik, bulaşıcı olmayan hastalıkların gelişimine karşı koruma ile ilgili olarak, sağlığın korunmasında baharatların ve bitkilerin gerçek rolü şu anda belirsizdir. Bu derleme, acı biber, tarçın, zencefil, karabiber, zerdeçal, çemen, biberiye ve sarımsak gibi yaygın olarak kullanılan baharat ve otların potansiyel sağlık yararlarını vurgulamaktadır ve tarçın, yüksek fenolik bileşik içeriği ile mükemmel antioksidan kaynaklarıdır.  Baharatlı yiyeceklerin sık tüketilmesinin ayrıca kanser ve iskemik kalp ve solunum sistemi hastalıklarından daha düşük ölüm riski ile bağlantılı olduğu açıktır. Bununla birlikte, özellikle kronik, bulaşıcı olmayan hastalıkların gelişimine karşı koruma ile ilgili olarak, sağlığın korunmasında baharatların ve bitkilerin gerçek rolü şu anda belirsizdir. Bu derleme, acı biber, tarçın, zencefil, karabiber, zerdeçal, çemen, biberiye ve sarımsak gibi yaygın olarak kullanılan baharat ve otların potansiyel sağlık yararlarını vurgulamaktadır ve tarçın, yüksek fenolik bileşik içeriği ile mükemmel antioksidan kaynaklarıdır.  Baharatlı yiyeceklerin sık tüketilmesinin ayrıca kanser ve iskemik kalp ve solunum sistemi hastalıklarından daha düşük ölüm riski ile bağlantılı olduğu açıktır. Bununla birlikte, özellikle kronik, bulaşıcı olmayan hastalıkların gelişimine karşı koruma ile ilgili olarak, sağlığın korunmasında baharatların ve bitkilerin gerçek rolü şu anda belirsizdir. Bu derleme, acı biber, tarçın, zencefil, karabiber, zerdeçal, çemen, biberiye ve sarımsak gibi yaygın olarak kullanılan baharat ve otların potansiyel sağlık yararlarını vurgulamaktadır. Bununla birlikte, özellikle kronik, bulaşıcı olmayan hastalıkların gelişimine karşı koruma ile ilgili olarak, sağlığın korunmasında baharatların ve bitkilerin gerçek rolü şu anda belirsizdir. Bu derleme, acı biber, tarçın, zencefil, karabiber, zerdeçal, çemen, biberiye ve sarımsak gibi yaygın olarak kullanılan baharat ve otların potansiyel sağlık yararlarını vurgulamaktadır. Bununla birlikte, özellikle kronik, bulaşıcı olmayan hastalıkların gelişimine karşı koruma ile ilgili olarak, sağlığın korunmasında baharatların ve bitkilerin gerçek rolü şu anda belirsizdir. Bu derleme, acı biber, tarçın, zencefil, karabiber, zerdeçal, çemen, biberiye ve sarımsak gibi yaygın olarak kullanılan baharat ve otların potansiyel sağlık yararlarını vurgulamaktadır.">Baharatların
-            Kalorileri</a> (32)</li>
-        <li class="cat-item cat-item-40"><a href="javascript:;">Balıkların Kalorileri</a> (8)
-        </li>
-        <li class="cat-item cat-item-31"><a href="https://kalorihesabi.com/kategori/kac-kalori/boreklerin-kalorileri/">Böreklerin Kalorileri</a> (2)
-        </li>
-        <li class="cat-item cat-item-41"><a href="https://kalorihesabi.com/kategori/kac-kalori/caylarin-kalorileri/">Çayların Kalorileri</a> (2)</li>
-        <li class="cat-item cat-item-33"><a href="https://kalorihesabi.com/kategori/kac-kalori/cesnilerin-kalorileri/">Çeşnilerin Kalorileri</a> (3)
-        </li>
-        <li class="cat-item cat-item-22"><a href="https://kalorihesabi.com/kategori/kac-kalori/cikolatalarin-kalorileri/">Çikolataların Kalorileri</a>
-          (10)</li>
-        <li class="cat-item cat-item-15"><a href="https://kalorihesabi.com/kategori/kac-kalori/corbalarin-kalorileri/">Çorbaların Kalorileri</a> (9)
-        </li>
-        <li class="cat-item cat-item-27"><a href="https://kalorihesabi.com/kategori/kac-kalori/dondurmalarin-kalorileri/">Dondurmaların Kalorileri</a>
-          (4)</li>
-        <li class="cat-item cat-item-25"><a href="https://kalorihesabi.com/kategori/kac-kalori/hayvani-gida-kalorileri/">Hayvani Gıda Kalorileri</a>
-          (14)</li>
-        <li class="cat-item cat-item-20"><a href="https://kalorihesabi.com/kategori/kac-kalori/iceceklerin-kalorileri/">İçeceklerin Kalorileri</a>
-          (13)</li>
-        <li class="cat-item cat-item-13"><a href="https://kalorihesabi.com/kategori/kac-kalori/kahvaltiliklarin-kalorileri/">Kahvaltılıkların
-            Kalorileri</a> (26)</li>
-        <li class="cat-item cat-item-26"><a href="https://kalorihesabi.com/kategori/kac-kalori/karbonhidratlarin-kalorileri/">Karbonhidratların
-            Kalorileri</a> (1)</li>
-        <li class="cat-item cat-item-17"><a href="https://kalorihesabi.com/kategori/kac-kalori/kuruyemislerin-kalorileri/">Kuruyemişlerin
-            Kalorileri</a> (10)</li>
-        <li class="cat-item cat-item-29"><a href="https://kalorihesabi.com/kategori/kac-kalori/makarnalarin-kalorileri/">Makarnaların Kalorileri</a>
-          (6)</li>
-        <li class="cat-item cat-item-21"><a href="https://kalorihesabi.com/kategori/kac-kalori/meyvelerin-kalorileri/">Meyvelerin Kalorileri</a> (45)
-        </li>
-        <li class="cat-item cat-item-28"><a href="https://kalorihesabi.com/kategori/kac-kalori/mezelerin-kalorileri/">Mezelerin Kalorileri</a> (2)
-        </li>
-        <li class="cat-item cat-item-30"><a href="https://kalorihesabi.com/kategori/kac-kalori/pilavlarin-kalorileri/">Pilavların Kalorileri</a> (17)
-        </li>
-        <li class="cat-item cat-item-16"><a href="https://kalorihesabi.com/kategori/kac-kalori/salatalarin-kalorileri/">Salataların Kalorileri</a> (7)
-        </li>
-        <li class="cat-item cat-item-24"><a href="https://kalorihesabi.com/kategori/kac-kalori/sebzelerin-kalorileri/">Sebzelerin Kalorileri</a> (48)
-        </li>
-        <li class="cat-item cat-item-32"><a href="https://kalorihesabi.com/kategori/kac-kalori/sirkelerin-kalorileri/">Sirkelerin Kalorileri</a> (5)
-        </li>
-        <li class="cat-item cat-item-23"><a href="https://kalorihesabi.com/kategori/kac-kalori/tahillarin-kalorileri/">Tahılların Kalorileri</a> (14)
-        </li>
-        <li class="cat-item cat-item-18"><a href="https://kalorihesabi.com/kategori/kac-kalori/tatlilarin-kalorileri/">Tatlıların Kalorileri</a> (18)
-        </li>
-        <li class="cat-item cat-item-34"><a href="https://kalorihesabi.com/kategori/kac-kalori/yaglarin-kalorileri/">Yağların Kalorileri</a> (3)</li>
-        <li class="cat-item cat-item-14"><a href="https://kalorihesabi.com/kategori/kac-kalori/yemeklerin-kalorileri/">Yemeklerin Kalorileri</a> (59)
-        </li>
+        <?php
+        $slug = 'kac-kalori';
+        $id = get_term_by('slug', $slug, 'category');
+        $categories =  get_categories('child_of=' . $id->term_id);
+
+        foreach ($categories as $category) {
+          echo "<li><a href=\"" . get_category_link($category->term_id) . "\">" . $category->cat_name . "</a></li>";}
+        ?>
       </ul>
     </div>
   </div>
-</section> -->
+</section>
 <section class="flex-col pt-0 md:pt-7 mt-4">
-<div class="container">
+  <div class="container">
     <?php $linkbyid = '1';
     $categorylink = get_category_link($linkbyid); ?>
     <h2 class="mb-7 border-gray border-dashed border-b-2 pb-4">
       <a href="<?php echo esc_url($categorylink); ?>"><?php echo get_the_category_by_ID($linkbyid); ?></a>
     </h2>
     <div class="w-full grid gap-x-5 gap-y-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
-    <?php query_posts('category_name=blog&posts_per_page=5'); ?>
-    <?php while (have_posts()) : the_post(); ?>
-      <?php $url = wp_get_attachment_url(get_post_thumbnail_id($post->ID), 'full'); ?>
-      <?php
-      $the_cat = get_the_category();
-      $category_name = $the_cat[0]->cat_name;
-      $category_link = get_category_link($the_cat[0]->cat_ID);
-      ?>
-      <div class="flex h-full flex-col">
-        <a href="<?php the_permalink(); ?>" class="block w-full h-full">
-        <?php if (has_post_thumbnail()) { ?>
-          <picture alt="">
-            <source alt="<?php the_title(); ?>" width="100%" height="100%" srcset="<?php echo $url ?>" type="image/avif" alt="">
-            <img alt="<?php the_title(); ?>" class="object-cover h-72 scale-100 hover:scale-105 ease-in duration-200" width="233" height="155" decoding="async" loading="lazy" src="<?php echo $url ?>" alt="">
-          </picture>
-          <?php } else { ?>
-           <img alt="<?php the_title(); ?>" src="<?php echo 'https://kalorihesabi.com/wp-content/uploads/2022/05/kalori-hesabi.heic' ?>" />
-          <?php }  ?>
-     
-        </a>
-        <div class="mt-5 flex gap-4 text-darkgray text-xs">
-          <div>
-            <i class="fa fa-tag mr-1"></i>
-            <?php the_category(', ') ?>
-          </div>
-          <div class="content-list-item-info-tag"> 
-            <i class="fa fa-hashtag"></i>
-            <?php the_tags(' ', ' '); ?>
-          </div>
-        </div>
-        <a href="<?php the_permalink(); ?>" class="block w-full h-full">
-          <div class="mt-1 block">
-            <h3><?php the_title(); ?></h3>
-          </div>
-        </a>
+      <?php query_posts('category_name=blog&posts_per_page=5'); ?>
+      <?php while (have_posts()) : the_post(); ?>
+        <?php $url = wp_get_attachment_url(get_post_thumbnail_id($post->ID), 'full'); ?>
+        <?php
+        $the_cat = get_the_category();
+        $category_name = $the_cat[0]->cat_name;
+        $category_link = get_category_link($the_cat[0]->cat_ID);
+        ?>
+        <div class="flex h-full flex-col">
+          <a href="<?php the_permalink(); ?>" class="block w-full h-full">
+            <?php if (has_post_thumbnail()) { ?>
+              <picture alt="">
+                <source alt="<?php the_title(); ?>" width="100%" height="100%" srcset="<?php echo $url ?>" type="image/avif" alt="">
+                <img alt="<?php the_title(); ?>" class="object-cover h-72 scale-100 hover:scale-105 ease-in duration-200" width="233" height="155" decoding="async" loading="lazy" src="<?php echo $url ?>" alt="">
+              </picture>
+            <?php } else { ?>
+              <img alt="<?php the_title(); ?>" src="<?php echo 'https://kalorihesabi.com/wp-content/uploads/2022/05/kalori-hesabi.heic' ?>" />
+            <?php }  ?>
 
-      </div>
+          </a>
+          <div class="mt-5 flex gap-4 text-darkgray text-xs">
+            <div>
+              <i class="fa fa-tag mr-1"></i>
+              <?php the_category(', ') ?>
+            </div>
+            <div class="content-list-item-info-tag">
+              <i class="fa fa-hashtag"></i>
+              <?php the_tags(' ', ' '); ?>
+            </div>
+          </div>
+          <a href="<?php the_permalink(); ?>" class="block w-full h-full">
+            <div class="mt-1 block">
+              <h3><?php the_title(); ?></h3>
+            </div>
+          </a>
+
+        </div>
       <?php endwhile; ?>
-       <?php wp_reset_query(); ?>
-       <div class="flex justify-center items-center h-full">
+      <?php wp_reset_query(); ?>
+      <div class="flex justify-center items-center h-full">
         <a href="<?php echo esc_url($categorylink); ?>" class="bg-white text-dark max-h-7 w-36 border-2 pb-5 pt-5 font-semibold border-dashed font-noto flex justify-center items-center hover:bg-dark hover:text-white">
           Tümünü Gör >
         </a>
