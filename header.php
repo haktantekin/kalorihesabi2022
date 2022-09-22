@@ -8,7 +8,7 @@
       document.querySelector('.loader-container').style.display = 'none'
     };
   </script> -->
-  <link href="<?php bloginfo('template_url'); ?>/dist//css/styles.css" rel="stylesheet" rel="preload" as="style" onload="this.rel='stylesheet'" />
+  <link href="<?php bloginfo('template_url'); ?>/dist//css/styles.css" rel="stylesheet" />
   <link rel="apple-touch-icon" sizes="57x57" href="<?php bloginfo('template_url'); ?>/dist/favicon/apple-icon-57x57.png">
   <link rel="apple-touch-icon" sizes="60x60" href="<?php bloginfo('template_url'); ?>/dist/favicon/apple-icon-60x60.png">
   <link rel="apple-touch-icon" sizes="72x72" href="<?php bloginfo('template_url'); ?>/dist/favicon/apple-icon-72x72.png">
@@ -79,7 +79,7 @@
   </section>
   <header class="h-28 md:h-44 text-left md:text-center flex flex-row lg:flex-col justify-between md:justify-center items-center">
     <div class="flex w-full text-center items-start lg:items-center flex-col">
-      <a href="<?php bloginfo('url'); ?>"><img class="w-36 md:w-52" src="<?php bloginfo('template_url'); ?>/dist/public/img/logo.png" /></a>
+      <a href="<?php bloginfo('url'); ?>"><img width="208" height="50" class="w-36 md:w-52" src="<?php bloginfo('template_url'); ?>/dist/public/img/logo.png" /></a>
       <div class="text-xs w-full text-left lg:text-center mt-3">
         "ne yersen elinle, o gelir seninle.."
       </div>

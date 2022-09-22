@@ -2,7 +2,7 @@
   <div class="container">
     <div class="grid grid-cols-1 md:grid-cols-4">
       <div class="">
-        <a href="/dist/index.html"><img class="w-36" src="<?php bloginfo('template_url'); ?>/dist/public/img/logo.png" /></a>
+        <a href="/dist/index.html"><img width="208" height="50" class="w-36" src="<?php bloginfo('template_url'); ?>/dist/public/img/logo.png" /></a>
         <p class="text-xs mt-3 w-64">
           Kalori Hesabı sitemizin amacı kalori hesaplama, ideal kilo hesaplama ve yediğimiz yiyeceklerin kaç kalori
           olduğunu sizlere doğru bir biçimde aktarmaktır.

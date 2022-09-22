@@ -27,7 +27,7 @@
     <div class="flex gap-2">
       <div class="grid gap-2 grid-cols-1 md:grid-cols-3">
         <div class="w-full relative">
-          <img class="w-full h-full gap-1 object-cover" src="https://kalorihesabi.com/wp-content/uploads/2022/09/kilo-aldirir-mi.avif" />
+          <img width="421" height="280" class="w-full h-full gap-1 object-cover" src="https://kalorihesabi.com/wp-content/uploads/2022/09/kilo-aldirir-mi.avif" />
           <a href="/kategori/kilo-aldirir-mi/" class="block w-full h-full before:bg-black before:w-full before:h-full before:absolute before:bg-opacity-40 before:top-0 hover:before:bg-opacity-10">
             <div class="absolute bottom-5 p-10 flex items-left justify-end flex-col">
               <h2 class="text-white font-semibold border-none pb-0 mb-0">Kilo Aldırır mı?</h2>
@@ -35,7 +35,7 @@
           </a>
         </div>
         <div class="w-full relative">
-          <img class="w-full object-cover" src="https://kalorihesabi.com/wp-content/uploads/2022/09/vegan-midir.avif" />
+          <img width="421" height="280" class="w-full object-cover" src="https://kalorihesabi.com/wp-content/uploads/2022/09/vegan-midir.avif" />
           <a href="/kategori/vegan-mi/" class="block w-full h-full before:bg-black before:w-full before:h-full before:absolute before:bg-opacity-40 before:top-0 hover:before:bg-opacity-10">
             <div class="absolute bottom-5 p-10 flex items-left justify-end flex-col">
               <h2 class="text-white font-semibold border-none pb-0 mb-0">Vegan mıdır?</h2>
@@ -43,7 +43,7 @@
           </a>
         </div>
         <div class="w-full relative">
-          <img class="w-full object-cover" src="https://kalorihesabi.com/wp-content/uploads/2022/09/kilo-hesaplama-araclari.avif" />
+          <img width="421" height="280" class="w-full object-cover" src="https://kalorihesabi.com/wp-content/uploads/2022/09/kilo-hesaplama-araclari.avif" />
           <a href="/hesaplama/" class="block w-full h-full before:bg-black before:w-full before:h-full before:absolute before:bg-opacity-40 before:top-0 hover:before:bg-opacity-10">
             <div class="absolute bottom-5 p-10 flex items-left justify-end flex-col">
               <h2 class="font-garamond text-white font-semibold border-none pb-0 mb-0">Kilo Hesaplama
