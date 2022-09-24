@@ -64,6 +64,13 @@
               $post = $orig_post;
               wp_reset_query(); ?>
             </div>
+            <div class="col-span-10 mt-7">
+              <?php
+              if (comments_open() || '0' != get_comments_number()) :
+                comments_template();
+              endif;
+              ?>
+            </div>
           </div>
           <div class="hidden lg:flex align-top justify-start h-full w-3/12 col-span-3 absolute right-0">
             <?php get_sidebar(); ?>
