@@ -21,7 +21,7 @@
                 <img class="object-cover h-72 scale-100 hover:scale-105 ease-in duration-200" width="233" height="155" decoding="async" loading="lazy" src="<?php echo $url ?>" alt="<?php the_title(); ?>">
               </picture>
             </a>
-            <div class="mt-5 flex gap-4 text-darkgray text-xs">
+            <div class="mt-5 flex gap-4 text-darkgray text-xs font-bold">
               <div>
                 <i class="fa fa-tag mr-1"></i>
                 <?php the_category(', ') ?>
