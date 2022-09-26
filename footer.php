@@ -2,23 +2,23 @@
   <div class="container">
     <div class="grid grid-cols-1 md:grid-cols-4">
       <div class="">
-        <a href="<?php bloginfo('url'); ?>"><img width="208" height="50" class="w-36" src="<?php bloginfo('template_url'); ?>/dist/public/img/logo.png" /></a>
+        <a href="<?php bloginfo('url'); ?>"><img width="208" height="50" class="w-36" src="<?php bloginfo('template_url'); ?>/dist/public/img/logo.png" alt="Kalori Hesabı" /></a>
         <p class="text-xs mt-3 w-64">
           Kalori Hesabı sitemizin amacı kalori hesaplama, ideal kilo hesaplama ve yediğimiz yiyeceklerin kaç kalori
           olduğunu sizlere doğru bir biçimde aktarmaktır.
         </p>
         <ul class="flex gap-4 justify-left mt-4">
           <li>
-            <a href="https://www.facebook.com/kalorihesabi/" target="_blank" rel="nofollow"><i class="fa-brands fa-facebook-f text-dark"></i></a>
+            <a href="https://www.facebook.com/kalorihesabi/" target="_blank" rel="nofollow" aria-label="facebook"><i class="fa-brands fa-facebook-f text-dark"></i></a>
           </li>
           <li>
-            <a href="https://www.instagram.com/kalorihesabicom/" target="_blank" rel="nofollow"><i class="fa-brands fa-instagram text-dark"></i></a>
+            <a href="https://www.instagram.com/kalorihesabicom/" target="_blank" rel="nofollow" aria-label="instagram"><i class="fa-brands fa-instagram text-dark"></i></a>
           </li>
           <li>
-            <a href="https://tr.pinterest.com/kalorihesabi/" target="_blank" rel="nofollow"><i class="fa-brands fa-pinterest text-dark"></i></a>
+            <a href="https://tr.pinterest.com/kalorihesabi/" target="_blank" rel="nofollow" aria-label="pinterest"><i class="fa-brands fa-pinterest text-dark"></i></a>
           </li>
           <li>
-            <a href="https://medium.com/@kalorihesabicom" target="_blank" rel="nofollow"><i class="fa-solid fa-link text-dark"></i></a>
+            <a href="https://medium.com/@kalorihesabicom" target="_blank" rel="nofollow" aria-label="medium"><i class="fa-solid fa-link text-dark"></i></a>
           </li>
         </ul>
       </div>

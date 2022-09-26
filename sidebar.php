@@ -5,7 +5,7 @@
                 <input class="p-3 w-full" type="text" placeholder="Arama Yap..." autocomplete="off" list="searchtext_s"
                   name="s">
                 <div>
-                  <button class="absolute right-3 top-3" type="button" src="<?php bloginfo('url'); ?>"> <i
+                  <button class="absolute right-3 top-3" type="button" name="button" aria-label="search" title="search" src="<?php bloginfo('url'); ?>"> <i
                       class="fa fa-search"></i> </button>
                 </div>
               </form>

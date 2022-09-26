@@ -28,9 +28,9 @@
   <meta name="msapplication-TileColor" content="#00000">
   <meta name="msapplication-TileImage" content="<?php bloginfo('template_url'); ?>/dist/favicon/ms-icon-144x144.png">
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui" />
   <meta name="msapplication-TileColor" content="#00000" />
-  <meta name="theme-color" content="#00000">
+  <meta name="theme-color" content="#00000" />
   <?php
   add_action('wp_head', 'insert_fb_in_head', 5);
   add_action('init', 'admin_bar');
@@ -52,7 +52,7 @@
           <form method="get" action="<?php bloginfo('url'); ?>">
             <input class="placeholder:text-white bg-transparent border-0 text-white pt-3 outline-none p-1 text-xs h-11" type="text" placeholder="Arama Yap..." autocomplete="off" list="searchtext_s" name="s" />
             <div class="input-button">
-              <button class="absolute right-1 top-4 h-4 w-2 flex items-center justify-center text-white" type="button" src="<?php bloginfo('url'); ?>">
+              <button class="absolute right-1 top-4 h-4 w-2 flex items-center justify-center text-white" name="search" aria-label="search" title="search" type="button" src="<?php bloginfo('url'); ?>">
                 <i class="fa fa-search"></i>
               </button>
             </div>
@@ -61,16 +61,16 @@
         <div class="flex justify-end">
           <ul class="flex gap-4 justify-center">
             <li>
-              <a href="https://www.facebook.com/kalorihesabi/" target="_blank" rel="nofollow"><i class="fa-brands fa-facebook-f text-white hover:text-main hover:font-bold"></i></a>
+              <a href="https://www.facebook.com/kalorihesabi/" target="_blank" rel="nofollow" aria-label="facebook"><i class="fa-brands fa-facebook-f text-white hover:text-main hover:font-bold"></i></a>
             </li>
             <li>
-              <a href="https://www.instagram.com/kalorihesabicom/" target="_blank" rel="nofollow"><i class="fa-brands fa-instagram text-white hover:text-main hover:font-bold"></i></a>
+              <a href="https://www.instagram.com/kalorihesabicom/" target="_blank" rel="nofollow" aria-label="instagram"><i class="fa-brands fa-instagram text-white hover:text-main hover:font-bold"></i></a>
             </li>
             <li>
-              <a href="https://tr.pinterest.com/kalorihesabi/" target="_blank" rel="nofollow"><i class="fa-brands fa-pinterest text-white hover:text-main hover:font-bold"></i></a>
+              <a href="https://tr.pinterest.com/kalorihesabi/" target="_blank" rel="nofollow" aria-label="pinterest"><i class="fa-brands fa-pinterest text-white hover:text-main hover:font-bold"></i></a>
             </li>
             <li>
-              <a href="https://medium.com/@kalorihesabicom" target="_blank" rel="nofollow"><i class="fa-solid fa-link text-white hover:text-main hover:font-bold"></i></a>
+              <a href="https://medium.com/@kalorihesabicom" target="_blank" rel="nofollow" aria-label="medium"><i class="fa-solid fa-link text-white hover:text-main hover:font-bold"></i></a>
             </li>
           </ul>
         </div>
@@ -79,7 +79,7 @@
   </section>
   <header class="h-28 md:h-44 text-left md:text-center flex flex-row lg:flex-col justify-between md:justify-center items-center">
     <div class="flex w-full text-center items-start lg:items-center flex-col">
-      <a href="<?php bloginfo('url'); ?>"><img width="208" height="50" class="w-36 md:w-52" src="<?php bloginfo('template_url'); ?>/dist/public/img/logo.png" /></a>
+      <a href="<?php bloginfo('url'); ?>"><img width="208" height="50" class="w-36 md:w-52" src="<?php bloginfo('template_url'); ?>/dist/public/img/logo.png" alt="Kalori Hesabı" /></a>
       <div class="text-xs w-full text-left lg:text-center mt-3">
         "ne yersen elinle, o gelir seninle.."
       </div>

@@ -11,7 +11,7 @@
   <div class="container">
     <div class="w-full h-[20rem] md:h-[40rem] flex gap-1 mb-2">
       <div class="relative w-full">
-        <img class="w-full h-[20rem] md:h-[40rem] object-cover" src="https://kalorihesabi.com/wp-content/uploads/2022/09/kac-kalori.avif" />
+        <img class="w-full h-[20rem] md:h-[40rem] object-cover" alt="Kaç Kalori" src="https://kalorihesabi.com/wp-content/uploads/2022/09/kac-kalori.avif" />
         <a href="/kategori/kac-kalori/" class="block w-full h-full before:bg-black before:w-full before:h-full before:absolute before:bg-opacity-40 before:top-0 hover:before:bg-opacity-10">
 
           <div class="absolute bottom-5 p-10 flex items-left justify-end flex-col">
@@ -27,7 +27,7 @@
     <div class="flex gap-2">
       <div class="grid gap-2 grid-cols-1 md:grid-cols-3">
         <div class="w-full relative">
-          <img width="421" height="280" class="w-full h-full gap-1 object-cover" src="https://kalorihesabi.com/wp-content/uploads/2022/09/kilo-aldirir-mi.avif" />
+          <img width="421" height="280" alt="Kilo Aldırır mı?" class="w-full h-full gap-1 object-cover" src="https://kalorihesabi.com/wp-content/uploads/2022/09/kilo-aldirir-mi.avif" />
           <a href="/kategori/kilo-aldirir-mi/" class="block w-full h-full before:bg-black before:w-full before:h-full before:absolute before:bg-opacity-40 before:top-0 hover:before:bg-opacity-10">
             <div class="absolute bottom-5 p-10 flex items-left justify-end flex-col">
               <h2 class="text-white font-semibold border-none pb-0 mb-0">Kilo Aldırır mı?</h2>
@@ -35,7 +35,7 @@
           </a>
         </div>
         <div class="w-full relative">
-          <img width="421" height="280" class="w-full object-cover" src="https://kalorihesabi.com/wp-content/uploads/2022/09/vegan-midir.avif" />
+          <img width="421" height="280" alt="Vegan Mıdır?" class="w-full object-cover" src="https://kalorihesabi.com/wp-content/uploads/2022/09/vegan-midir.avif" />
           <a href="/kategori/vegan-mi/" class="block w-full h-full before:bg-black before:w-full before:h-full before:absolute before:bg-opacity-40 before:top-0 hover:before:bg-opacity-10">
             <div class="absolute bottom-5 p-10 flex items-left justify-end flex-col">
               <h2 class="text-white font-semibold border-none pb-0 mb-0">Vegan mıdır?</h2>
@@ -43,7 +43,7 @@
           </a>
         </div>
         <div class="w-full relative">
-          <img width="421" height="280" class="w-full object-cover" src="https://kalorihesabi.com/wp-content/uploads/2022/09/kilo-hesaplama-araclari.avif" />
+          <img width="421" height="280" alt="Kilo Hesaplama Araçları" class="w-full object-cover" src="https://kalorihesabi.com/wp-content/uploads/2022/09/kilo-hesaplama-araclari.avif" />
           <a href="/hesaplama/" class="block w-full h-full before:bg-black before:w-full before:h-full before:absolute before:bg-opacity-40 before:top-0 hover:before:bg-opacity-10">
             <div class="absolute bottom-5 p-10 flex items-left justify-end flex-col">
               <h2 class="font-garamond text-white font-semibold border-none pb-0 mb-0">Kilo Hesaplama
@@ -103,7 +103,7 @@
             <?php if (has_post_thumbnail()) { ?>
               <picture alt="">
                 <source alt="<?php the_title(); ?>" width="100%" height="100%" srcset="<?php echo $url ?>" type="image/avif" alt="">
-                <img alt="<?php the_title(); ?>" class="object-cover h-72 scale-100 hover:scale-105 ease-in duration-200" width="233" height="155" decoding="async" loading="lazy" src="<?php echo $url ?>" alt="">
+                <img alt="<?php the_title(); ?>" class="object-cover h-72 scale-100 hover:scale-105 ease-in duration-200" width="233" height="155" decoding="async" loading="lazy" src="<?php echo $url ?>">
               </picture>
             <?php } else { ?>
               <img alt="<?php the_title(); ?>" src="<?php echo 'https://kalorihesabi.com/wp-content/uploads/2022/05/kalori-hesabi.heic' ?>" />
