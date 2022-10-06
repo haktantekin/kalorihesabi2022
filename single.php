@@ -22,8 +22,8 @@
             <?php the_tags(' ', ' '); ?>
           </div>
         </div>
-        <section class="grid grid-cols-none lg:grid-cols-10 w-full gap-0 relative">
-          <div class="flex flex-col col-auto lg:col-span-7">
+        <section class="grid grid-cols-1 lg:grid-cols-10 w-full gap-0 relative">
+          <div class="flex flex-col col-span-1 lg:col-span-7 overflow-hidden">
             <div class="content-img mb-7">
               <picture alt="Poşet Ton Balığı Kaç Kalori?" class="w-full max-h-48" alt="<?php the_title(); ?>">
                 <source width="233" height="155" srcset="<?php echo $url ?>" type="image/avif" alt="<?php the_title(); ?>">
@@ -64,7 +64,7 @@
               $post = $orig_post;
               wp_reset_query(); ?>
             </div>
-            <div class="col-span-10 mt-7">
+            <div class="col-span-1 md:col-span-10 mt-7">
               <?php
               if (comments_open() || '0' != get_comments_number()) :
                 comments_template();

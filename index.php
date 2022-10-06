@@ -101,10 +101,7 @@
         <div class="flex h-full flex-col">
           <a href="<?php the_permalink(); ?>" class="block w-full h-full">
             <?php if (has_post_thumbnail()) { ?>
-              <picture alt="">
-                <source alt="<?php the_title(); ?>" width="100%" height="100%" srcset="<?php echo $url ?>" type="image/avif" alt="">
-                <img alt="<?php the_title(); ?>" class="object-cover h-72 scale-100 hover:scale-105 ease-in duration-200" width="233" height="155" decoding="async" loading="lazy" src="<?php echo $url ?>">
-              </picture>
+                <img alt="<?php the_title(); ?>" class="object-cover w-full h-72 scale-100 hover:scale-105 ease-in duration-200" width="233" height="155" decoding="async" loading="lazy" src="<?php echo $url ?>">
             <?php } else { ?>
               <img alt="<?php the_title(); ?>" src="<?php echo 'https://kalorihesabi.com/wp-content/uploads/2022/05/kalori-hesabi.heic' ?>" />
             <?php }  ?>
@@ -177,16 +174,13 @@
         <div class="flex h-full flex-col">
           <a href="<?php the_permalink(); ?>" class="block w-full h-full">
             <?php if (has_post_thumbnail()) { ?>
-              <picture alt="">
-                <source alt="<?php the_title(); ?>" width="100%" height="100%" srcset="<?php echo $url ?>" type="image/avif" alt="">
-                <img alt="<?php the_title(); ?>" class="object-cover h-72 scale-100 hover:scale-105 ease-in duration-200" width="233" height="155" decoding="async" loading="lazy" src="<?php echo $url ?>" alt="">
-              </picture>
+                <img alt="<?php the_title(); ?>" class="object-cover h-72 w-full scale-100 hover:scale-105 ease-in duration-200" width="233" height="155" decoding="async" loading="lazy" src="<?php echo $url ?>" alt="">
             <?php } else { ?>
               <img alt="<?php the_title(); ?>" src="<?php echo 'https://kalorihesabi.com/wp-content/uploads/2022/05/kalori-hesabi.heic' ?>" />
             <?php }  ?>
 
           </a>
-          <div class="mt-5 flex gap-4 text-darkgray text-xs font-bold">
+          <div class="mt-5 flex gap-4 text-dark text-xs font-bold">
             <div>
               <i class="fa fa-tag mr-1"></i>
               <?php the_category(', ') ?>

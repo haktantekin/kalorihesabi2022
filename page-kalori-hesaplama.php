@@ -10,7 +10,7 @@
       <?php the_title(); ?>
       </h1>
       <section class="grid grid-cols-none lg:grid-cols-10 w-full gap-0 relative">
-        <div class="flex flex-col col-auto lg:col-span-7">
+        <div class="flex flex-col col-auto lg:col-span-7 overflow-hidden">
           <div class="content-img mb-7">
           <picture alt="Poşet Ton Balığı Kaç Kalori?" class="w-full max-h-48" alt="<?php the_title(); ?>">
             <source width="233" height="155" srcset="<?php echo $url ?>" type="image/avif" alt="<?php the_title(); ?>">
