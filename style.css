@@ -1,9 +1,13 @@
 /*
-	Theme Name: Kalori Hesabı Tailwind
+	Theme Name: Haktan Tekin Tailwind
 	Description: Haktan Tekin
-	Theme URI: http://kalorihesabi.com
+	Theme URI: http://haktan.in
 	Version: 2.0
 	Author: Haktan Tekin
 	Author URI: http://haktantekin.com
 	Tags: Atlar Hızlandı
 */
+
+.open_grepper_editor{
+	display: none !important;
+}

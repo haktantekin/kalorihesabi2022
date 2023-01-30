@@ -5,25 +5,7 @@
 @ini_set( 'max_execution_time', '300' );
 
 
-function replace_text_wps($text){
-  $replace = array(
-      // 'WORD TO REPLACE' => 'REPLACE WORD WITH THIS'
-      '&' => ' ',
-      'quot;' => ' ',
-      'amp;' => ' ',
-      '#8230;'=>' ',
-      '#8221;'=>' ',
-      '#8220;'=>'"',
-      '#8217;'=>'\'',
-      '#8212;'=>'--',
-      '#8216;'=>'\'',
-      '#8211;'=>'-',
-  );
-  $text = str_replace(array_keys($replace), $replace, $text);
-  return $text;
-}
 
-add_filter('the_content', 'replace_text_wps');
 
 function no_self_ping( &$links ) {
   $home = get_option( 'home' );
@@ -90,10 +72,7 @@ function register_my_menus() {
   register_nav_menus(
     array(
       'Header' => __( 'Header' ),
-      'Info' => __( 'Info' ),
-      'Calculate' => __( 'Calculate' )
-
-    
+      'Info' => __( 'Info' )
     )
   );
 }
@@ -196,7 +175,7 @@ function cmyee_allowed_mime_types( $mime_types ) {
 
 add_filter( 'upload_mimes', 'cmyee_allowed_mime_types', 1, 1 );
 
-function kalorihesabi_get_discussion_data() {
+function haktanin_get_discussion_data() {
 	static $discussion, $post_id;
 
 	$current_post_id = get_the_ID();
@@ -230,7 +209,7 @@ function kalorihesabi_get_discussion_data() {
 	return $discussion;
 }
 
-function kalorihesabi_comment_form_defaults( $defaults ) {
+function haktanin_comment_form_defaults( $defaults ) {
 	$comment_field = $defaults['comment_field'];
 
 	// Adjust height of comment form.
@@ -238,6 +217,6 @@ function kalorihesabi_comment_form_defaults( $defaults ) {
 
 	return $defaults;
 }
-add_filter( 'comment_form_defaults', 'kalorihesabi_comment_form_defaults' );
+add_filter( 'comment_form_defaults', 'haktanin_comment_form_defaults' );
 ?>
 

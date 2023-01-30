@@ -23,8 +23,8 @@
   <link rel="icon" type="image/png" sizes="96x96" href="<?php bloginfo('template_url'); ?>/dist/favicon/favicon-96x96.png">
   <link rel="icon" type="image/png" sizes="16x16" href="<?php bloginfo('template_url'); ?>/assets/faviconfavicon-16x16.png">
   <link rel="manifest" href="<?php bloginfo('template_url'); ?>/dist/favicon/manifest.json">
-  <link rel="preconnect" href="https://kalorihesabi.com" />
-  <link rel="dns-prefetch" href="https://kalorihesabi.com" />
+  <link rel="preconnect" href="https://haktan.in" />
+  <link rel="dns-prefetch" href="https://haktan.in" />
   <meta name="msapplication-TileColor" content="#00000">
   <meta name="msapplication-TileImage" content="<?php bloginfo('template_url'); ?>/dist/favicon/ms-icon-144x144.png">
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -61,16 +61,10 @@
         <div class="flex justify-end">
           <ul class="flex gap-4 justify-center">
             <li>
-              <a href="https://www.facebook.com/kalorihesabi/" target="_blank" rel="nofollow" aria-label="facebook"><i class="fa-brands fa-facebook-f text-white hover:text-main hover:font-bold"></i></a>
+              <a href="https://www.instagram.com/nat.kah/" target="_blank" rel="nofollow" aria-label="instagram"><i class="fa-brands fa-instagram text-white hover:text-main hover:font-bold"></i></a>
             </li>
             <li>
-              <a href="https://www.instagram.com/kalorihesabicom/" target="_blank" rel="nofollow" aria-label="instagram"><i class="fa-brands fa-instagram text-white hover:text-main hover:font-bold"></i></a>
-            </li>
-            <li>
-              <a href="https://tr.pinterest.com/kalorihesabi/" target="_blank" rel="nofollow" aria-label="pinterest"><i class="fa-brands fa-pinterest text-white hover:text-main hover:font-bold"></i></a>
-            </li>
-            <li>
-              <a href="https://medium.com/@kalorihesabicom" target="_blank" rel="nofollow" aria-label="medium"><i class="fa-solid fa-link text-white hover:text-main hover:font-bold"></i></a>
+              <a href="https://medium.com/@haktantekin" target="_blank" rel="nofollow" aria-label="medium"><i class="fa-solid fa-link text-white hover:text-main hover:font-bold"></i></a>
             </li>
           </ul>
         </div>
@@ -79,10 +73,10 @@
   </section>
   <header class="h-28 md:h-44 text-left md:text-center flex flex-row lg:flex-col justify-between md:justify-center items-center">
     <div class="flex w-full text-center items-start lg:items-center flex-col">
-      <a href="<?php bloginfo('url'); ?>"><img width="208" height="50" class="w-36 md:w-52" src="<?php bloginfo('template_url'); ?>/dist/public/img/logo.png" alt="Kalori Hesabı" /></a>
-      <div class="text-xs w-full text-left lg:text-center mt-3">
-        "ne yersen elinle, o gelir seninle.."
-      </div>
+      <a href="<?php bloginfo('url'); ?>"><img width="208" height="50" class="w-36 md:w-52" src="<?php bloginfo('template_url'); ?>/dist/public/img/logo.png" alt="Haktan Tekin" /></a>
+      <!-- <div class="text-xs w-full text-left lg:text-center mt-3">
+        "koduna koduğumun kodu"
+      </div> -->
     </div>
     <div class="flex md:hidden">
       <div class="nav-icon js-nav-icon" onclick="mobileButton()"> <i class="fa-sharp fa-solid fa-burger text-3xl"></i></div>

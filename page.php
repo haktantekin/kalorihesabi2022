@@ -11,7 +11,7 @@
       </h1>
       <section class="grid grid-cols-none lg:grid-cols-10 w-full gap-0 relative">
         <div class="flex flex-col col-auto lg:col-span-7 overflow-hidden">
-              <div class="content-in tracking-wide text-base font-relaway">
+              <div class="content-in">
         <?php the_content(); ?>
           </div>
         </div>

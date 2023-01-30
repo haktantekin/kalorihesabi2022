@@ -13,7 +13,7 @@
         <h1 class="border-gray border-dashed border-b-2 pb-4">
           <?php the_title(); ?>
         </h1>
-        <div class="mt-5 mb-10 flex gap-4 text-darkgray text-xs">
+        <div class="mt-5  flex gap-4 text-darkgray text-xs">
           <div>
             <i class="fa fa-tag mr-1"></i>
             <?php the_category(', ') ?>
@@ -24,46 +24,10 @@
         </div>
         <section class="grid grid-cols-1 lg:grid-cols-10 w-full gap-0 relative">
           <div class="flex flex-col col-span-1 lg:col-span-7 overflow-hidden">
-            <div class="content-img mb-7">
-              <picture alt="Poşet Ton Balığı Kaç Kalori?" class="w-full max-h-48" alt="<?php the_title(); ?>">
-                <source width="233" height="155" srcset="<?php echo $url ?>" type="image/avif" alt="<?php the_title(); ?>">
-                <img class="w-full" width="233" height="155" decoding="async" loading="lazy" src="<?php echo $url ?>" alt="<?php the_title(); ?>">
-              </picture>
-            </div>
-            <div class="content-in tracking-wide text-base font-relaway">
+            <div class="content-in">
               <?php the_content(); ?>
             </div>
-            <div class="other-post bg-gray p-5 rounded-md mt-6">
-              <strong class="pb-4 font-bold block">İlgili Konular</strong>
-              <?php $orig_post = $post;
-              global $post;
-              $categories = get_the_category($post->ID);
-              if ($categories) {
-                $category_ids = array();
-                foreach ($categories as $individual_category) $category_ids[] = $individual_category->term_id;
-
-                $args = array(
-                  'category__in' => $category_ids,
-                  'post__not_in' => array($post->ID),
-                  'posts_per_page' => 3,
-                  'ignore_sticky_posts' => 1,
-                  'orderby' => 'rand'
-
-                );
-
-                $my_query = new wp_query($args);
-                if ($my_query->have_posts()) {
-
-                  while ($my_query->have_posts()) {
-                    $my_query->the_post(); ?>
-                    <a class="font-medium text-dark capitalize block mb-2 text-sm last:mb-0" href="<?php the_permalink() ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a>
-              <?
-                  }
-                }
-              }
-              $post = $orig_post;
-              wp_reset_query(); ?>
-            </div>
+       
             <div class="col-span-1 md:col-span-10 mt-7">
               <?php
               if (comments_open() || '0' != get_comments_number()) :

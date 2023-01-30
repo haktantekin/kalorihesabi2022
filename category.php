@@ -15,11 +15,10 @@
           $category_link = get_category_link($the_cat[0]->cat_ID);
           ?>
           <div class="flex h-full flex-col">
-            <a href="<?php the_permalink(); ?>" class="block w-full h-full">
-              <picture alt="<?php the_title(); ?>">
-                <source width="100%" height="100%" srcset="<?php echo $url ?>" type="image/avif" alt="<?php the_title(); ?>">
-                <img class="object-cover h-72 scale-100 hover:scale-105 ease-in duration-200" width="233" height="155" decoding="async" loading="lazy" src="<?php echo $url ?>" alt="<?php the_title(); ?>">
-              </picture>
+          <a href="javascript:;" class="block w-full h-full">
+              <div class="mt-1 block">
+                <h2 class="mb-0 pb-0"><?php the_title(); ?></h2>
+              </div>
             </a>
             <div class="mt-5 flex gap-4 text-dark text-xs font-bold">
               <div>
@@ -30,11 +29,6 @@
                 <?php the_tags(' ', ' '); ?>
               </div>
             </div>
-            <a href="javascript:;" class="block w-full h-full">
-              <div class="mt-1 block">
-                <h2 class="mb-0 pb-0"><?php the_title(); ?></h2>
-              </div>
-            </a>
           </div>
         <?php endwhile; ?>
     

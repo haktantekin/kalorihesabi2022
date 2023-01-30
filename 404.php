@@ -4,7 +4,7 @@
     <div class="container">
       <section class="grid grid-cols-none h-100 w-full gap-0 relative">
         <div class="flex flex-col">
-              <div class="content-in tracking-wide text-base font-relaway">
+              <div class="content-in">
               Biraz zayıflayalım diye sanırım bu sayfayı silmişiz. Bizimle <a href="/iletisim/">iletişim</a>e geçmek ister misin?
           </div>
         </div>
